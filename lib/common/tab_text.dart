@@ -4,7 +4,7 @@ import 'package:flutter_video_game_series_app/styleguide/text_styles.dart';
 class TabText extends StatelessWidget {
   final bool isSelected;
   final String text;
-  Function onTabTap;
+  final Function onTabTap;
 
   TabText({this.text, this.isSelected, this.onTabTap});
 
@@ -14,9 +14,12 @@ class TabText extends StatelessWidget {
       angle: -1.58,
       child: InkWell(
         onTap: onTabTap,
-        child: Text(
-          text,
+        child: AnimatedDefaultTextStyle(
           style: isSelected ? selectedTabStyle : defaultTabStyle,
+          duration: const Duration(milliseconds: 500),
+          child: Text(
+            text,
+          ),
         ),
       ),
     );
