@@ -67,7 +67,7 @@ class ForumDetailsWidget extends StatelessWidget {
                   valueStyle: valueTextStyle,
                 ),
               ],
-            )
+            ),
           ],
         ),
       ),

@@ -2,7 +2,6 @@ import 'package:flutter/material.dart';
 import 'package:flutter_video_game_series_app/common/forum_card.dart';
 import 'package:flutter_video_game_series_app/common/tab_text.dart';
 import 'package:flutter_video_game_series_app/model/forum.dart';
-import 'package:flutter_video_game_series_app/styleguide/text_styles.dart';
 
 class HorizontalTabLayout extends StatefulWidget {
   @override
@@ -38,12 +37,14 @@ class _HorizontalTabLayoutState extends State<HorizontalTabLayout>
       child: Stack(
         children: <Widget>[
           Positioned(
-            left: -20,
+            left: -30,
             bottom: 0,
             top: 0,
             width: 110.0,
             child: Padding(
-              padding: const EdgeInsets.symmetric(vertical: 80.0),
+              padding: const EdgeInsets.symmetric(
+                vertical: 80.0,
+              ),
               child: Column(
                 mainAxisAlignment: MainAxisAlignment.spaceBetween,
                 children: <Widget>[
@@ -100,21 +101,13 @@ class _HorizontalTabLayoutState extends State<HorizontalTabLayout>
       [
         ForumCard(forum: fortniteForum),
         ForumCard(forum: pubgForum),
-        ForumCard(forum: fortniteForum),
+      ],
+      [
         ForumCard(forum: pubgForum),
+        ForumCard(forum: fortniteForum),
       ],
       [
         ForumCard(forum: fortniteForum),
-        ForumCard(forum: fortniteForum),
-        ForumCard(forum: fortniteForum),
-        ForumCard(forum: pubgForum)
-      ],
-      [
-        ForumCard(forum: fortniteForum),
-        ForumCard(forum: pubgForum),
-        ForumCard(forum: fortniteForum),
-        ForumCard(forum: pubgForum),
-        ForumCard(forum: pubgForum),
         ForumCard(forum: pubgForum),
       ]
     ][index];
